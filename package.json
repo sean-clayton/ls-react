@@ -7,6 +7,7 @@
   "author": "S. P. O. Clayton <sean@seanclayton.me>",
   "license": "ISC",
   "scripts": {
+    "prepublishOnly": "npm run build",
     "build": "lsc -c -b -o dist src/index.ls"
   },
   "devDependencies": {
