@@ -4,7 +4,7 @@ require! {
 }
 
 h = curry create-element
-$ = h Fragment null
+$ = h Fragment, null
 
 h1 = h "h1"
 h2 = h "h2"
