@@ -8,6 +8,7 @@
   "license": "ISC",
   "scripts": {
     "prepublishOnly": "npm run build",
+    "start": "lsc -w -b -o dist src/index.ls",
     "build": "lsc -c -b -o dist src/index.ls"
   },
   "devDependencies": {

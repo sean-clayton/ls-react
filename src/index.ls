@@ -1,9 +1,8 @@
 require! {
   react: {create-element, Fragment}
-  'prelude-ls': {curry}
 }
 
-h = curry create-element
+h = (e, p, c) --> create-element e, p, c
 $ = h Fragment, null
 
 h1 = h "h1"
@@ -200,4 +199,5 @@ module.exports.summary = summary
 module.exports.menuitem = menuitem
 module.exports.menu = menu
 
-module.exports.default = h
+module.exports.h = h
+module.exports.$ = $
