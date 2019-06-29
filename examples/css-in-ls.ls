@@ -1,7 +1,7 @@
 require! {
-  'emotion-styled': emotion
+  '@emotion/styled': emotion
   'styled-components': styled
-  'ls-react': {h, h1}
+  'ls-react': {$, h, h1}
 }
 
 # Emotion/Styled-Components
@@ -16,5 +16,9 @@ StyledDiv = styled.div (p) ->
   color: p.color
 
 MyComponent = ->
-  h StyledDiv, {},
-    h1 {} "Howdy!"
+  $ (
+    h EmotionDiv, {},
+      h1 {} "Howdy from Emotion!"
+    h StyledDiv, {},
+      h1 {} "Howdy from Styled-Components!"
+  )

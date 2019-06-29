@@ -1,9 +1,10 @@
 require! {
-  react: {create-element}
+  react: {create-element, Fragment}
   'prelude-ls': {curry}
 }
 
 h = curry create-element
+$ = h Fragment null
 
 h1 = h "h1"
 h2 = h "h2"
