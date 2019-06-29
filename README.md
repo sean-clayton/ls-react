@@ -6,8 +6,9 @@ A little library to make writing React code in LiveScript a little nicer.
 
 ```ls
 require! {
+  'prelude-ls': {apply}
   react: {use-state}
-  'react-dom': {render}
+  'react-dom': ReactDOM
   'ls-react': {h, div, button, h1, p}
 }
 
@@ -20,7 +21,10 @@ App = ({ title }) ->
     p {} "Count is: #{count}"
     b on-click: increment, "+"
 
-render h App, title: 'Yo!'
+ReactDOM.render(
+  h App, title: 'Yo!'
+  document.getElementById "root"
+)
 ```
 
 For more usage examples, check out the `examples` directory.
