@@ -1,5 +1,4 @@
 require! {
-  'prelude-ls': {apply}
   react: {use-state}
   'react-dom': ReactDOM
   'ls-react': {h, div, button, h1, p}

@@ -6,7 +6,6 @@ A little library to make writing React code in LiveScript a little nicer.
 
 ```ls
 require! {
-  'prelude-ls': {apply}
   react: {use-state}
   'react-dom': ReactDOM
   'ls-react': {h, div, button, h1, p}
