@@ -6,7 +6,7 @@ require! {
 MyComponent = ->
   [count, set-count] = use-state(0)
   div {},
-    button 
+    button do
       * class-name: 'heading'
         on-click: -> set-count count + 1
       "Count: #{count}"
@@ -30,7 +30,7 @@ MyReducerComponent = ->
   [state, dispatch] = use-reducer reducer initial-state
 
   div {},
-    button {on-click: -> dispatch(actions.INCREMENT)} "+"
+    button {on-click: -> dispatch actions.INCREMENT} "+"
     p {} state
-    button {on-click: -> dispatch(actions.DECREMENT)} "-"
+    button {on-click: -> dispatch actions.DECREMENT} "-"
 

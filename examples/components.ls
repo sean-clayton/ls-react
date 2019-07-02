@@ -11,8 +11,7 @@ StyledButton = (props) ->
 # Mapping through data
 
 MyButtonGroup = ({ buttons }) ->
-  buttons
-  |> map ({ on-click, label, id }) ->
+  buttons |> map ({ on-click, label, id }) ->
     h MyButton, {on-click, key: id} label
 
 # Socket Component

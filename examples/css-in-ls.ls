@@ -1,24 +1,21 @@
 require! {
-  '@emotion/styled': emotion
-  'styled-components': styled
+  '@emotion/styled': {default: emotion}
+  'styled-components': {default: styled}
   'ls-react': {$, h, h1}
 }
 
 # Emotion/Styled-Components
 # They both work pretty much the same way
 
-EmotionDiv = emotion.div (p) ->
+EmotionDiv = emotion('div') ->
   background-color: \white
-  background-image: p.image-url
+  background-image: it.image-url
 
-StyledDiv = styled.div (p) ->
+StyledDiv = styled.div ->
   background-color: \blue
-  color: p.color
+  color: it.color
 
 MyComponent = ->
-  $ (
-    h EmotionDiv, {},
-      h1 {} "Howdy from Emotion!"
-    h StyledDiv, {},
-      h1 {} "Howdy from Styled-Components!"
-  )
+  $ do
+    h EmotionDiv, {}, "Howdy from Emotion!"
+    h StyledDiv, {}, "Howdy from Styled-Components!"

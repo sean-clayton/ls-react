@@ -1,5 +1,5 @@
 require! {
-  './index.ls': {$, h, h1, h2, p}
+  './index.ls': {$, h, h1, h2, p, div}
   '@emotion/styled': {default: styled}
   'styled-components': {default: styledc}
   'react-test-renderer': render
@@ -31,7 +31,10 @@ describe '$' !->
       $ do
         h1 {} 'Heading 1'
         h2 {} 'Heading 2'
-        p {} 'Paragraph'
+        div {},
+          p {} 'Sup!'
+          p {} 'Howdy!'
+          p {} 'NOWAI!'
 
     tree = component.toJSON()
 
