@@ -63,6 +63,15 @@ describe 'css-in-ls' !->
   test 'emotion' !->
     StyledButton = styled.button do
       background-color: \red
+      color: \white
+      display: \grid
+      grid-template-areas: '''
+        tl tc tr
+        cl c cr
+        bl bc br
+      '''
+      grid-template-columns: '1fr 1fr 1fr'
+      grid-template-rows: '1fr 1fr 1fr'
 
     component = render.create do
       h StyledButton, {}, 'Click me!'
