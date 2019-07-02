@@ -9,15 +9,45 @@
   "scripts": {
     "prepublishOnly": "npm run build",
     "start": "lsc -w -b -o dist src/index.ls",
-    "build": "lsc -c -b -o dist src/index.ls"
+    "build": "lsc -c -b -o dist src/index.ls",
+    "test": "jest"
   },
   "devDependencies": {
-    "livescript": "^1.6.0"
+    "@emotion/core": "^10.0.14",
+    "@emotion/styled": "^10.0.14",
+    "jest": "^24.8.0",
+    "livescript": "^1.6.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-test-renderer": "^16.8.6",
+    "styled-components": "^4.3.2"
   },
   "peerDependencies": {
     "react": ">=16.0.0"
   },
   "dependencies": {
     "prelude-ls": "^1.1.2"
+  },
+  "jest": {
+    "roots": [
+      "<rootDir>"
+    ],
+    "modulePaths": [
+      "<rootDir>"
+    ],
+    "moduleDirectories": [
+      "node_modules"
+    ],
+    "moduleFileExtensions": [
+      "ls",
+      "js"
+    ],
+    "testMatch": [
+      "**/__tests__/**/*.ls",
+      "**/?(*.)+(spec|test).ls"
+    ],
+    "transform": {
+      "ls": "./jest.preprocessor.js"
+    }
   }
 }

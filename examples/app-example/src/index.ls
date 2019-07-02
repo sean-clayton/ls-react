@@ -1,25 +1,25 @@
 require! {
-  react: {use-state, use-effect, create-element: h, Fragment}
-  'react-dom': ReactDOM
-  'ls-react': {div, button, h1, span}
+  react: {use-state, use-effect}
+  'react-dom': {render}
+  'ls-react': {h, $, button, h1, span}
 }
 
-App = ({ title }) ->
+App = ({ title = 'Default title!' }) ->
   [count, set-count] = use-state 0
   increment = -> set-count count + 1
   decrement = -> set-count count - 1
 
-  use-effect !->
-    console.log "mounted!"
-  , []
+  use-state do
+    !->
+      console.log 'Mounted!'
+    []
 
-  h Fragment, {},
-    h1 class-name: 'heading', title
-    button on-click: decrement, '-'
+  $ do
+    h1 {class-name: 'heading'} title
+    button {on-click: decrement} '-'
     span {} " Count is: #{count} "
-    button on-click: increment, '+'
+    button {on-click: increment} '+'
 
-ReactDOM.render(
-  h App, title: 'Yo!'
+render do
+  h App, title: 'Yo!', null
   document.getElementById "root"
-)
