@@ -7,7 +7,7 @@ require! {
 # Emotion/Styled-Components
 # They both work pretty much the same way
 
-EmotionDiv = emotion('div') ->
+EmotionDiv = emotion.div ->
   background-color: \white
   background-image: it.image-url
 

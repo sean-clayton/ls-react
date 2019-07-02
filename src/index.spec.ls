@@ -61,7 +61,7 @@ describe 'hooks' !->
 
 describe 'css-in-ls' !->
   test 'emotion' !->
-    StyledButton = styled("button") do
+    StyledButton = styled.button do
       background-color: \red
 
     component = render.create do
