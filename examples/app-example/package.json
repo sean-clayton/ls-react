@@ -20,7 +20,7 @@
     "@emotion/core": "^10.0.14",
     "@emotion/styled": "^10.0.14",
     "json5": "^2.1.0",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.21",
     "ls-react": "^1.1.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
